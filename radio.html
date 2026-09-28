@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>网络收音机 v1.2 · 杰克陈</title>
+<title>网络收音机 v1.3 · 杰克陈</title>
 <style>
 :root{--bg:#0d1117;--card:#161d27;--line:#26313f;--t:#e6ebf0;--dim:#8b9bb0;
 --acc:#7ee787;--cyan:#2f81f7;--yel:#f2cc60;--red:#f47067}
@@ -86,7 +86,7 @@ border-radius:10px;padding:3px 10px;white-space:nowrap}
 <body>
 <header>
   <h1>🎵 网络收音机</h1>
-  <span class="ver">v1.2</span>
+  <span class="ver">v1.3</span>
   <a class="ghub" href="index.html">← 返回首页</a>
   <a class="ghub" href="https://github.com/szboboxing/Radio-Box" target="_blank" rel="noopener">GitHub ↗</a>
 </header>
@@ -126,7 +126,7 @@ border-radius:10px;padding:3px 10px;white-space:nowrap}
 <div id="list"></div>
 
 <footer>
-  <div class="ft1">杰克陈 · 网络收音机 v1.2</div>
+  <div class="ft1">杰克陈 · 网络收音机 v1.3</div>
   <nav>
     <b>作品集：</b>
     <a href="index.html">鎏金</a>
@@ -165,7 +165,13 @@ var STATIONS=[
   {n:'大连少儿广播',u:'http://lhttp.qingting.fm/live/1084/64k.mp3', t:'mp3',g:'少儿故事'},
   {n:'江苏故事广播',u:'http://lhttp.qingting.fm/live/20012/64k.mp3',t:'mp3',g:'少儿故事'},
   {n:'BBC 世界台',  u:'http://stream.live.vc.bbcmedia.co.uk/bbc_world_service',t:'mp3',g:'国际'},
-  {n:'新加坡Yes933',u:'http://playerservices.streamtheworld.com/api/livestream-redirect/YES933.mp3',t:'mp3',g:'私人定制'}
+  {n:'新加坡Yes933',u:'http://playerservices.streamtheworld.com/api/livestream-redirect/YES933.mp3',t:'mp3',g:'私人定制'},
+  /* 成都地区（2026-09-28 按蜻蜓热度榜选取，音源已实测可播） */
+  {n:'四川新闻广播FM106.1', u:'http://lhttp.qingting.fm/live/4906/64k.mp3',   t:'mp3',g:'成都'},
+  {n:'四川交通广播FM101.7', u:'http://lhttp.qingting.fm/live/4886/64k.mp3',   t:'mp3',g:'成都'},
+  {n:'成都年代音乐怀旧好声音',u:'http://lhttp.qingting.fm/live/20211686/64k.mp3',t:'mp3',g:'成都'},
+  {n:'年代音乐1022',       u:'http://lhttp.qingting.fm/live/20500066/64k.mp3',t:'mp3',g:'成都'},
+  {n:'成都电台FM94.6',     u:'http://lhttp.qingting.fm/live/4892/64k.mp3',   t:'mp3',g:'成都'}
 ];
 var GROUP_COLORS=['#7ee787','#58d6eb','#f2cc60','#d2a8ff','#ff9f43','#f778ba'];
 
@@ -412,7 +418,7 @@ function msMeta(){
   if(!navigator.mediaSession)return;
   try{
     navigator.mediaSession.metadata=cur<0?null:new MediaMetadata(
-      {title:STATIONS[cur].n,artist:'网络收音机 v1.1'});
+      {title:STATIONS[cur].n,artist:'网络收音机 v1.3'});
   }catch(e){}
 }
 if(navigator.mediaSession){
